@@ -244,16 +244,17 @@ example born in 1901 and died in 1959 - included / born in 1889 and died in 1925
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
 function get20s(array){
-// let newArr= []
-//   for(let i in array){
-//     if(array[i]["years"].includes("1900-2000")){
-//       newArr.push(array[i]["name"])
-//     }
-//   }
-// return newArr
+  let newArr = []
+  for(let i in array){
+    let yearNum = parseFloat(array[i]["years"])
 
+    if(yearNum>1900 && yearNum<2000){
+      newArr.push(array[i]["name"])
+    }
+  }
+  return newArr
 }
-// console.log(get20s(artists));
+console.log(get20s(artists));
 
 
 
